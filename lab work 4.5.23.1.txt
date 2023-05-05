@@ -1,0 +1,48 @@
+public class CalculatorSimulator {
+
+    public static void main(String[] args) {
+        try {
+            double taxAmount = TaxCalculator.calculateTax("Ron", false, 34000);
+            System.out.println("Ron: Tax amount is " + taxAmount);
+        } catch (CountryNotValidException e) {
+            System.out.println("Ron: Country not valid - " + e.getMessage());
+        } catch (EmployeeNameInvalidException e) {
+            System.out.println("Ron: Employee name not valid - " + e.getMessage());
+        } catch (TaxNotEligibleException e) {
+            System.out.println("Ron: Not eligible for Tax calculation - " + e.getMessage());
+        }
+        
+        try {
+            double taxAmount = TaxCalculator.calculateTax("Tim", true, 1000);
+            System.out.println("Tim: Tax amount is " + taxAmount);
+        } catch (CountryNotValidException e) {
+            System.out.println("Tim: Country not valid - " + e.getMessage());
+        } catch (EmployeeNameInvalidException e) {
+            System.out.println("Tim: Employee name not valid - " + e.getMessage());
+        } catch (TaxNotEligibleException e) {
+            System.out.println("Tim: Not eligible for Tax calculation - " + e.getMessage());
+        }
+        
+        try {
+            double taxAmount = TaxCalculator.calculateTax("Jack", true, 55000);
+            System.out.println("Jack: Tax amount is " + taxAmount);
+        } catch (CountryNotValidException e) {
+            System.out.println("Jack: Country not valid - " + e.getMessage());
+        } catch (EmployeeNameInvalidException e) {
+            System.out.println("Jack: Employee name not valid - " + e.getMessage());
+        } catch (TaxNotEligibleException e) {
+            System.out.println("Jack: Not eligible for Tax calculation - " + e.getMessage());
+        }
+        
+        try {
+            double taxAmount = TaxCalculator.calculateTax("Jenny", true, 15000);
+            System.out.println("Jenny: Tax amount is " + taxAmount);
+        } catch (CountryNotValidException e) {
+            System.out.println("Jenny: Country not valid - " + e.getMessage());
+        } catch (EmployeeNameInvalidException e) {
+            System.out.println("Jenny: Employee name not valid - " + e.getMessage());
+        } catch (TaxNotEligibleException e) {
+            System.out.println("Jenny: Not eligible for Tax calculation - " + e.getMessage());
+        }
+    }
+}
